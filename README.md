@@ -1,6 +1,4 @@
 # html-css-ni-ohrguihrguwurighwrg
-Mana, so'ralgan talablar asosida tayyorlangan chiroyli va interaktiv forma uchun HTML va CSS kodlari.
-
 1. HTML fayli (index.html)
 HTML
 <!DOCTYPE html>
@@ -8,249 +6,234 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaktiv Aloqa Formasi</title>
+    <title>BEM Metodologiyasi Bo'yicha Kartalar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-body">
 
-    <div class="form-container">
-        <h2>Biz bilan aloqa</h2>
-        <form action="#" method="POST">
-            
-            <div class="form-group">
-                <label for="name">Ismingiz</label>
-                <input type="text" id="name" placeholder="Masalan: Ali" required minlength="3">
-                <span class="validation-msg">Kamida 3 ta harf kiriting</span>
+    <div class="card-grid">
+        
+        <article class="card">
+            <div class="card__image-container">
+                <img class="card__image" src="https://picsum.photos/300/200?random=1" alt="Mahsulot rasmi">
             </div>
-
-            <div class="form-group">
-                <label for="email">Email manzilingiz</label>
-                <input type="email" id="email" placeholder="example@mail.com" required>
-                <span class="validation-msg">To'g'ri email kiriting (ism@domen.com)</span>
+            <div class="card__content">
+                <h3 class="card__title">Zamonaviy Krossovka</h3>
+                <p class="card__description">Kundalik kiyish va sport bilan shug'ullanish uchun juda qulay va yengil krossovka.</p>
+                <div class="card__price-box">
+                    <span class="card__price">450,000 so'm</span>
+                </div>
+                <button class="card__button">Sotib olish</button>
             </div>
+        </article>
 
-            <div class="form-group">
-                <label for="message">Xabaringiz</label>
-                <textarea id="message" rows="4" placeholder="Xabaringizni shu yerga yozing..." required minlength="10"></textarea>
-                <span class="validation-msg">Xabar juda qisqa</span>
+        <article class="card card--sale">
+            <div class="card__image-container">
+                <span class="card__badge card__badge--sale">Chegirma</span>
+                <img class="card__image" src="https://picsum.photos/300/200?random=2" alt="Mahsulot rasmi">
             </div>
-
-            <div class="checkbox-group">
-                <label class="custom-checkbox-label">
-                    <input type="checkbox" class="real-checkbox" required>
-                    <span class="custom-checkbox"></span>
-                    Shartlarga roziman
-                </label>
+            <div class="card__content">
+                <h3 class="card__title">Aqlli Soat Pro</h3>
+                <p class="card__description">Yurak urishi, uyqu va sport faolligini kuzatuvchi eng so'nggi modeldagi aqlli soat.</p>
+                <div class="card__price-box">
+                    <span class="card__price card__price--old">800,000 so'm</span>
+                    <span class="card__price card__price--current">599,000 so'm</span>
+                </div>
+                <button class="card__button">Sotib olish</button>
             </div>
+        </article>
 
-            <button type="submit" class="submit-btn">Yuborish</button>
-        </form>
+        <article class="card card--new">
+            <div class="card__image-container">
+                <span class="card__badge card__badge--new">Yangi</span>
+                <img class="card__image" src="https://picsum.photos/300/200?random=3" alt="Mahsulot rasmi">
+            </div>
+            <div class="card__content">
+                <h3 class="card__title">Simsiz Quloqchinlar</h3>
+                <p class="card__description">Yuqori sifatli ovoz va shovqinni to'suvchi (ANC) tizimiga ega simsiz quloqchin.</p>
+                <div class="card__price-box">
+                    <span class="card__price">350,000 so'm</span>
+                </div>
+                <button class="card__button">Sotib olish</button>
+            </div>
+        </article>
+
     </div>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* Sahifani markazlashtirish uchun umumiy stillar */
-body {
+/* Sahifa uchun umumiy BEM stillari */
+.page-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #f5f7fa;
     margin: 0;
+    padding: 40px 20px;
 }
 
-/* Forma konteyneri */
-.form-container {
-    background-color: white;
-    padding: 30px;
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================================
+   BEM: BLOCK (Karta asosiy bloki)
+   ======================================================== */
+.card {
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e8ed;
 }
 
-h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    text-align: center;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* ========================================================
+   BEM: MODIFIERS (Blok darajasidagi modifikatorlar)
+   ======================================================== */
+/* Aksiyadagi karta uchun maxsus chegirma foni yoki burchak rangi */
+.card--sale {
+    border: 1px solid #ff4d4f;
+    background-color: #fff1f0;
+}
+
+/* Yangi mahsulot kartasi uchun maxsus yashil tusli jilo */
+.card--new {
+    border: 1px solid #73d13d;
+    background-color: #f6ffed;
+}
+
+/* ========================================================
+   BEM: ELEMENTS (Blok ichidagi elementlar)
+   ======================================================== */
+.card__image-container {
     position: relative;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #34495e;
-    font-size: 14px;
-}
-
-/* Input va Textarea umumiy stillari */
-input[type="text"],
-input[type="email"],
-textarea {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #bdc3c7;
-    border-radius: 6px;
-    font-size: 15px;
-    color: #2c3e50;
-    box-sizing: border-box;
-    outline: none;
-    /* Silliq o'tish effektlari */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+    background-color: #eaeff2;
 }
 
-/* ========================================================
-   1. ::placeholder rangi o'zgartirilgan
-   ======================================================== */
-input::placeholder,
-textarea::placeholder {
-    color: #a0aec0;
-    font-style: italic;
-    opacity: 1; /* Brauzer standart shaffofligini toirlash */
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* ========================================================
-   2. :focus paytida border rangi o'zgarishi
-   ======================================================== */
-input:focus,
-textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+.card__content {
+    padding: 20px;
 }
 
-/* ========================================================
-   3. :valid / :invalid bilan validatsiya ko'rsatilishi
-   ======================================================== */
-/* Foydalanuvchi yozishni boshlaganda (yoki qiymat bo'lganda) va u xato bo'lsa */
-input:placeholder-shown:invalid,
-textarea:placeholder-shown:invalid {
-    border-color: #bdc3c7; /* Bo'sh turganda xato deb ko'rsatmaydi */
+.card__title {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #1f2937;
+    font-weight: 600;
 }
 
-input:not(:placeholder-shown):invalid,
-textarea:not(:placeholder-shown):invalid {
-    border-color: #e74c3c;
-    background-color: #fdf2f2;
+.card__description {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+    height: 63px; /* Matnlar bir xil tekislikda turishi uchun fixed balandlik */
+    overflow: hidden;
 }
 
-input:not(:placeholder-shown):valid,
-textarea:not(:placeholder-shown):valid {
-    border-color: #2ecc71;
-    background-color: #f4fbf7;
-}
-
-/* Validatsiya xabarlarini boshqarish */
-.validation-msg {
-    font-size: 12px;
-    color: #e74c3c;
-    display: none;
-    margin-top: 5px;
-}
-
-input:not(:placeholder-shown):invalid ~ .validation-msg,
-textarea:not(:placeholder-shown):invalid ~ .validation-msg {
-    display: block;
-}
-
-
-/* ========================================================
-   4. Custom CSS checkbox (standart checkbox yashiriladi)
-   ======================================================== */
-.checkbox-group {
-    margin-bottom: 25px;
-}
-
-.custom-checkbox-label {
+.card__price-box {
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    gap: 10px;
+}
+
+.card__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Element ichidagi modifikatorlar (E__A--B) */
+.card__price--old {
     font-size: 14px;
-    color: #555;
-    user-select: none;
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-weight: 400;
 }
 
-/* Standart brauzer checkboxini butkul yashiramiz */
-.real-checkbox {
+.card__price--current {
+    color: #ff4d4f;
+    font-size: 20px;
+}
+
+.card__badge {
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-/* Yangi dizayndagi checkboxning tashqi ko'rinishi */
-.custom-checkbox {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #bdc3c7;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
     border-radius: 4px;
-    margin-right: 10px;
-    background-color: white;
-    transition: all 0.2s ease;
+    z-index: 1;
 }
 
-/* Checkbox bosilgandagi (checked) holati */
-.real-checkbox:checked ~ .custom-checkbox {
-    background-color: #3498db;
-    border-color: #3498db;
+.card__badge--sale {
+    background-color: #ff4d4f;
 }
 
-/* Checkbox ichidagi "belgi" (checkmark) - boshlang'ich yashirin holat */
-.custom-checkbox::after {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+.card__badge--new {
+    background-color: #73d13d;
 }
 
-/* Checkbox bosilganda belgini ko'rsatish */
-.real-checkbox:checked ~ .custom-checkbox::after {
-    display: block;
-}
-
-/* Custom checkbox validatsiyasi */
-.real-checkbox:focus ~ .custom-checkbox {
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-
-
-/* Yuborish tugmasi stili */
-.submit-btn {
+.card__button {
     width: 100%;
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
+    padding: 10px 0;
+    background-color: #2f54eb;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
-.submit-btn:hover {
-    background-color: #2980b9;
+.card__button:hover {
+    background-color: #1d39c4;
 }
-Kodning o'ziga xosliklari:
-Silliq Validatsiya (:not(:placeholder-shown)): Forma yuklanishi bilanoq birdan qizil (xato) bo'lib qolmaydi. Foydalanuvchi ma'lumot yozishni boshlaganidan keyingina validatsiya ishga tushadi.
 
-Custom Checkbox: input[type="checkbox"] mutlaqo yashirilib, uning o'rniga CSS ::after hamda :checked selektorlari yordamida chiroyli zamonaviy checkbox yaratildi.
+/* Modifikatorli kartalarning ichidagi tugma ranglarini moslash */
+.card--sale .card__button {
+    background-color: #ff4d4f;
+}
 
-Fokus holati:
+.card--sale .card__button:hover {
+    background-color: #d9363e;
+}
+
+.card--new .card__button {
+    background-color: #73d13d;
+}
+
+.card--new .card__button:hover {
+    background-color: #52c41a;
+}
+BEM qoidalariga rioya etilishi tahlili:
+Blok (.card): Mustaqil komponent bo'lib, o'z funksiyasiga ega.
+
+Elementlar (.card__image, .card__title, .card__button): Faqat blok ichida ma'noga ega bo'lgan va blok nomiga ikki tag-chiziq (__) bilan yopishgan elementlar.
+
+Modifikatorlar (.card--sale, .card--new, .card__badge--sale): Blok yoki elementning holati yoki ko'rinishini o'zgartirish uchun ikki chiziq (--) bilan qo'shilgan klasslar.
+
+Teg selektorlarisiz: CSS-da birorta ham div, img, h3,
