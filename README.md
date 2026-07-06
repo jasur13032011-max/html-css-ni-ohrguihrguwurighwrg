@@ -1,5 +1,5 @@
-# html-css-ni-ohrguihrguwurighwrg
-Mana, Boshqaruv paneli (Dashboard) uchun so'ralgan talablar asosida tayyorlangan to'liq responsive HTML va CSS kodlari.
+# html-css-ni-ohrguihrguwurighwrgcard__detai
+Elektron tijorat (E-commerce) tizimlari uchun eng ko'p ishlatiladigan interaktiv mahsulot sahifasining (Product Detail Page) HTML va CSS kodlari. Dizayn to'liq responsive bo'lib, o'ng tomondagi ma'lumotlar qismi Flexbox yordamida joylashtirilgan.
 
 1. HTML fayli (index.html)
 HTML
@@ -8,144 +8,122 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard — Boshqaruv Paneli</title>
+    <title>Mahsulot Sahifasi</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dashboard">
+<body class="product-page">
 
-    <aside class="sidebar">
-        <div class="sidebar__logo">
-            <h2>AdminPanel</h2>
-        </div>
-        <nav class="sidebar__nav">
-            <a href="#" class="sidebar__link sidebar__link--active">Bosh sahifa</a>
-            <a href="#" class="sidebar__link">Tahlillar</a>
-            <a href="#" class="sidebar__link">Buyurtmalar</a>
-            <a href="#" class="sidebar__link">Foydalanuvchilar</a>
-            <a href="#" class="sidebar__link">Sozlamalar</a>
-        </nav>
-        <div class="sidebar__profile">
-            <div class="sidebar__avatar">A</div>
-            <div class="sidebar__user-info">
-                <span class="sidebar__user-name">Asrorbek</span>
-                <span class="sidebar__user-role">Administrator</span>
-            </div>
-        </div>
-    </aside>
-
-    <main class="main-content">
+    <div class="product-container">
         
-        <header class="header">
-            <h1 class="header__title">Bosh sahifa</h1>
-            <div class="header__actions">
-                <div class="header__search-box">
-                    <input type="text" class="header__search" placeholder="Qidirish...">
-                </div>
-                <button class="header__notifications" aria-label="Bildirishnomalar">
-                    🔔 <span class="header__badge">3</span>
-                </button>
+        <section class="product-gallery">
+            <div class="product-gallery__main-wrapper">
+                <img class="product-gallery__main" src="https://picsum.photos/600/600?random=10" alt="Asosiy mahsulot rasmi">
             </div>
-        </header>
-
-        <section class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-card__icon">👥</span>
-                <div class="stat-card__details">
-                    <span class="stat-card__title">Foydalanuvchilar</span>
-                    <span class="stat-card__value">12,450</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-card__icon">💰</span>
-                <div class="stat-card__details">
-                    <span class="stat-card__title">Daromad</span>
-                    <span class="stat-card__value">$45,230</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-card__icon">📦</span>
-                <div class="stat-card__details">
-                    <span class="stat-card__title">Buyurtmalar</span>
-                    <span class="stat-card__value">1,120</span>
-                </div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-card__icon">📈</span>
-                <div class="stat-card__details">
-                    <span class="stat-card__title">O'sish</span>
-                    <span class="stat-card__value">+24.5%</span>
-                </div>
+            <div class="product-gallery__thumbnails">
+                <img class="product-gallery__thumb product-gallery__thumb--active" src="https://picsum.photos/600/600?random=10" alt="Thumbnail 1">
+                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=11" alt="Thumbnail 2">
+                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=12" alt="Thumbnail 3">
+                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=13" alt="Thumbnail 4">
             </div>
         </section>
 
-        <section class="table-container">
-            <h3 class="table-container__title">Oxirgi tranzaksiyalar</h3>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Mijoz</th>
-                            <th>Sana</th>
-                            <th>Suma</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alisher Navoiy</td>
-                            <td>06.07.2026</td>
-                            <td>$1,200</td>
-                            <td><span class="status-badge status-badge--success">Bajarildi</span></td>
-                        </tr>
-                        <tr>
-                            <td>Zuhra Umarova</td>
-                            <td>05.07.2026</td>
-                            <td>$450</td>
-                            <td><span class="status-badge status-badge--pending">Kutilmoqda</span></td>
-                        </tr>
-                        <tr>
-                            <td>Jasur Aliyev</td>
-                            <td>04.07.2026</td>
-                            <td>$890</td>
-                            <td><span class="status-badge status-badge--success">Bajarildi</span></td>
-                        </tr>
-                        <tr>
-                            <td>Madina Sobirova</td>
-                            <td>02.07.2026</td>
-                            <td>$150</td>
-                            <td><span class="status-badge status-badge--danger">Rad etildi</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="product-details">
+            <h1 class="product-details__title">Premium Charm Krossovka</h1>
+            
+            <div class="product-details__rating">
+                <span class="product-details__stars">★★★★☆</span>
+                <span class="product-details__reviews">(4.8 / 120 ta sharh)</span>
+            </div>
+
+            <div class="product-details__price-box">
+                <span class="product-details__price">850,000 so'm</span>
+                <span class="product-details__old-price">1,100,000 so'm</span>
+            </div>
+
+            <p class="product-details__description">
+                Yuqori sifatli tabiiy charm va qulay ortopedik taglikka ega bo'lgan ushbu krossovka kundalik kiyish hamda faol hayot tarzi uchun maxsus ishlab chiqilgan.
+            </p>
+
+            <hr class="product-details__divider">
+
+            <div class="product-option">
+                <span class="product-option__title">Rang:</span>
+                <div class="product-option__swatches">
+                    <label class="color-swatch">
+                        <input type="radio" name="color" checked>
+                        <span class="color-swatch__visual color-swatch__visual--black"></span>
+                    </label>
+                    <label class="color-swatch">
+                        <input type="radio" name="color">
+                        <span class="color-swatch__visual color-swatch__visual--blue"></span>
+                    </label>
+                    <label class="color-swatch">
+                        <input type="radio" name="color">
+                        <span class="color-swatch__visual color-swatch__visual--brown"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="product-option">
+                <span class="product-option__title">O'lcham:</span>
+                <div class="product-option__swatches">
+                    <label class="size-swatch">
+                        <input type="radio" name="size">
+                        <span class="size-swatch__visual">40</span>
+                    </label>
+                    <label class="size-swatch">
+                        <input type="radio" name="size" checked>
+                        <span class="size-swatch__visual">41</span>
+                    </label>
+                    <label class="size-swatch">
+                        <input type="radio" name="size">
+                        <span class="size-swatch__visual">42</span>
+                    </label>
+                    <label class="size-swatch">
+                        <input type="radio" name="size">
+                        <span class="size-swatch__visual">43</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-selector__btn" type="button">−</button>
+                    <input class="quantity-selector__input" type="number" value="1" min="1">
+                    <button class="quantity-selector__btn" type="button">+</button>
+                </div>
+                <button class="product-actions__cart-btn" type="button">Savatga qo'shish</button>
+            </div>
+
+            <hr class="product-details__divider">
+
+            <div class="product-specs">
+                <h3 class="product-specs__title">Xususiyatlari:</h3>
+                <ul class="product-specs__list">
+                    <li class="product-specs__item"><strong>Material:</strong> 100% Tabiiy charm</li>
+                    <li class="product-specs__item"><strong>Taglik:</strong> EVA (Yengil va yumshoq)</li>
+                    <li class="product-specs__item"><strong>Ishlab chiqarilgan:</strong> O'zbekiston</li>
+                </ul>
             </div>
         </section>
 
-    </main>
+    </div>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* Custom Properties (Variables) */
+/* Custom Variables */
 :root {
-    --bg-main: #f8fafc;
-    --bg-sidebar: #0f172a;
-    --text-light: #f1f5f9;
-    --text-muted: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
     --text-dark: #1e293b;
-    --primary: #3b82f6;
+    --text-muted: #64748b;
+    --border: #cbd5e1;
+    --bg-light: #f8fafc;
     --white: #ffffff;
-    --border-color: #e2e8f0;
-    
-    --success: #10b981;
-    --success-bg: #d1fae5;
-    --pending: #f59e0b;
-    --pending-bg: #fef3c7;
-    --danger: #ef4444;
-    --danger-bg: #fee2e2;
 }
 
-/* Reset elementlari */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -154,340 +132,282 @@ CSS
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-main);
+    background-color: #f1f5f9;
     color: var(--text-dark);
+    padding: 40px 20px;
+    line-height: 1.5;
 }
 
 /* ========================================================
-   5. CSS GRID BILAN 2 USTUNLI LAYOUT
+   6. FLEXBOX BILAN 2 USTUNLI LAYOUT
    ======================================================== */
-.dashboard {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    min-height: 100vh;
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product-gallery,
+.product-details {
+    flex: 1 1 480px; /* Ekranga qarab kengayadi yoki mobilga yiqiladi */
 }
 
 /* ========================================================
-   1. STICKY SIDEBAR
+   1. RASM GALEREYASI
    ======================================================== */
-.sidebar {
-    background-color: var(--bg-sidebar);
-    color: var(--text-light);
+.product-gallery__main-wrapper {
+    width: 100%;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+}
+
+.product-gallery__main {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.product-gallery__thumbnails {
     display: flex;
-    flex-direction: column;
-    padding: 24px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    z-index: 100;
+    gap: 12px;
 }
 
-.sidebar__logo {
-    margin-bottom: 40px;
-}
-
-.sidebar__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-grow: 1;
-}
-
-.sidebar__link {
-    color: #94a3b8;
-    text-decoration: none;
-    padding: 12px 16px;
+/* 7. Thumbnaillarda hover effekti */
+.product-gallery__thumb {
+    width: calc(25% - 9px);
+    aspect-ratio: 1;
+    border: 2px solid transparent;
     border-radius: 8px;
-    font-weight: 500;
+    cursor: pointer;
+    object-fit: cover;
     transition: all 0.2s ease;
 }
 
-.sidebar__link:hover, 
-.sidebar__link--active {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-}
-
-.sidebar__profile {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-top: 20px;
-    border-top: 1px solid #334155;
-}
-
-.sidebar__avatar {
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.sidebar__user-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar__user-name {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.sidebar__user-role {
-    font-size: 12px;
-    color: var(--text-muted);
-}
-
-/* Main content wrapper */
-.main-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* ========================================================
-   2. TOP HEADER
-   ======================================================== */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white);
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.header__title {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.header__actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.header__search {
-    padding: 10px 16px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    outline: none;
-    width: 200px;
-    transition: width 0.3s ease;
-}
-
-.header__search:focus {
-    width: 260px;
+.product-gallery__thumb:hover,
+.product-gallery__thumb--active {
     border-color: var(--primary);
-}
-
-.header__notifications {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    position: relative;
-}
-
-.header__badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: var(--danger);
-    color: var(--white);
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 10px;
-    font-weight: bold;
+    opacity: 0.8;
+    transform: scale(1.03);
 }
 
 /* ========================================================
-   3. STATS KARTALAR
+   2 & 5. MAHSULOT DETALLARI VA TAVSIFI
    ======================================================== */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.product-details__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
-.stat-card {
-    background-color: var(--white);
-    padding: 24px;
-    border-radius: 12px;
+.product-details__rating {
     display: flex;
     align-items: center;
-    gap: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
-.stat-card__icon {
-    font-size: 28px;
-    background-color: #f1f5f9;
-    padding: 12px;
-    border-radius: 10px;
-}
-
-.stat-card__details {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-card__title {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 500;
-}
-
-.stat-card__value {
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: 4px;
-}
-
-/* ========================================================
-   4. DATA TABLE & STATUS BADGE
-   ======================================================== */
-.table-container {
-    background-color: var(--white);
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.table-container__title {
-    margin-bottom: 20px;
+.product-details__stars {
+    color: #f59e0b;
     font-size: 18px;
 }
 
-.table-responsive {
-    overflow-x: auto;
-}
-
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.data-table th, 
-.data-table td {
-    padding: 16px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.data-table th {
-    background-color: #f8fafc;
+.product-details__reviews {
     color: var(--text-muted);
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 600;
+    font-size: 14px;
 }
 
-.data-table tbody tr:hover {
-    background-color: #f8fafc;
+.product-details__price-box {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* Status Badges */
-.status-badge {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    display: inline-block;
+.product-details__price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
 }
 
-.status-badge--success {
-    background-color: var(--success-bg);
-    color: var(--success);
+.product-details__old-price {
+    font-size: 16px;
+    color: var(--text-muted);
+    text-decoration: line-through;
 }
 
-.status-badge--pending {
-    background-color: var(--pending-bg);
-    color: var(--pending);
+.product-details__description {
+    color: #475569;
+    margin-bottom: 24px;
 }
 
-.status-badge--danger {
-    background-color: var(--danger-bg);
-    color: var(--danger);
+.product-details__divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
 }
 
 /* ========================================================
-   6. RESPONSIVE — MOBILGACHA YIQILADIGAN SIDEBAR
+   3. RANG VA O'LCHAM TANLASH (SWATCHES)
    ======================================================== */
-@media (max-width: 992px) {
-    .dashboard {
-        grid-template-columns: 1fr; /* Sidebar alohida ustun bo'lmaydi */
-    }
-
-    .sidebar {
-        position: relative;
-        height: auto;
-        width: 100%;
-        padding: 16px 20px;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .sidebar__logo {
-        margin-bottom: 0;
-    }
-
-    .sidebar__nav {
-        flex-direction: row;
-        gap: 5px;
-        flex-grow: 0;
-    }
-
-    .sidebar__link {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-
-    .sidebar__profile {
-        border-top: none;
-        padding-top: 0;
-    }
-
-    .sidebar__user-info {
-        display: none; /* Mobil ekranda joy tejash uchun */
-    }
+.product-option {
+    margin-bottom: 20px;
 }
 
-@media (max-width: 576px) {
-    .sidebar {
-        flex-direction: column;
-        gap: 15px;
-    }
+.product-option__title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
 
-    .sidebar__nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.product-option__swatches {
+    display: flex;
+    gap: 12px;
+}
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+/* Radio inputni yashirish */
+.color-swatch input,
+.size-swatch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 
-    .header__actions {
-        width: 100%;
-        justify-content: space-between;
-    }
+/* Color Swatch vizuali */
+.color-swatch__visual {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    outline: 2px solid var(--border);
+    transition: all 0.2s ease;
+}
 
-    .header__search {
-        width: 100%;
-    }
-    
-    .header__search:focus {
-        width: 100%;
-    }
+.color-swatch__visual--black { background-color: #1e293b; }
+.color-swatch__visual--blue { background-color: #1d4ed8; }
+.color-swatch__visual--brown { background-color: #78350f; }
+
+.color-swatch input:checked + .color-swatch__visual {
+    outline-color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Size Swatch vizuali */
+.size-swatch__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.size-swatch__visual:hover {
+    border-color: var(--primary);
+    background-color: var(--bg-light);
+}
+
+.size-swatch input:checked + .size-swatch__visual {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* ========================================================
+   4 & 7. MIQDOR VA AMALLAR TUGMALARI
+   ======================================================== */
+.product-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* +/- Miqdor qismi */
+.quantity-selector {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.quantity-selector__btn {
+    background-color: var(--bg-light);
+    border: none;
+    width: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quantity-selector__btn:hover {
+    background-color: #cbd5e1;
+}
+
+.quantity-selector__input {
+    width: 50px;
+    border: none;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.quantity-selector__input::-webkit-outer-spin-button,
+.quantity-selector__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Savatga qo'shish tugmasi */
+.product-actions__cart-btn {
+    flex-grow: 1;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.product-actions__cart-btn:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 5. Xususiyatlari */
+.product-specs__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-specs__list {
+    list-style-type: none;
+}
+
+.product-specs__item {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #475569;
 }
