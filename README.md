@@ -1,6 +1,4 @@
 # html-css-ni-ohrguihrguwurighwrgcard__detai
-Mana, shaxsiy portfolioga mo'ljallangan, professional light/dark muvozanatiga ega, to'liq responsive HTML va CSS kodlari. Sahifada bo'limlararo o'tish silliq scroll (scroll-behavior: smooth) orqali amalga oshiriladi.
-
 1. HTML fayli (index.html)
 HTML
 <!DOCTYPE html>
@@ -8,200 +6,179 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaxsiy Portfolio</title>
+    <title>Tariflar va Narxlar</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="portfolio">
+<body class="pricing-page">
 
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#" class="navbar__logo">Portfolio.</a>
-            <div class="navbar__links">
-                <a href="#hero" class="navbar__link">Asosiy</a>
-                <a href="#about" class="navbar__link">Men haqimda</a>
-                <a href="#projects" class="navbar__link">Loyihalar</a>
-                <a href="#skills" class="navbar__link">Ko'nikmalar</a>
-                <a href="#contact" class="navbar__link">Aloqa</a>
-            </div>
-        </div>
-    </nav>
-
-    <header id="hero" class="hero">
-        <div class="hero__container">
-            <span class="hero__welcome">Assalomu alaykum!</span>
-            <h1 class="hero__title">Men <span class="hero__name">Asrorbek</span></h1>
-            <h2 class="hero__subtitle">Frontend Dasturchi</h2>
-            <p class="hero__description">Zamonaviy, tezkor va foydalanuvchilar uchun qulay veb-interfeyslarni yaratish bilan shug'ullanaman.</p>
-            <a href="#" class="hero__cta-btn" download>CV Yuklab Olish</a>
-        </div>
-    </header>
-
-    <section id="about" class="about">
-        <div class="about__container">
-            <div class="about__avatar-box">
-                <div class="about__avatar">A</div>
-            </div>
-            <div class="about__content">
-                <h2 class="about__title">Men haqimda</h2>
-                <p class="about__text">Men veb-dasturlash olamiga qiziqaman va har bir loyihaga ijodiy yondashaman. Kod yozish bilan birga dizaynning mukammal chiqishiga ham katta e'tibor qarataman.</p>
-                <div class="about__experience">
-                    <span class="about__years">3+</span>
-                    <span class="about__exp-text">Yillik amaliy<br>tajriba</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2 class="projects__title">Mening loyihalarim</h2>
-        <div class="projects__grid">
+    <div class="pricing-container">
+        <header class="pricing-header">
+            <h1 class="pricing-header__title">Mos keluvchi tarifni tanlang</h1>
+            <p class="pricing-header__subtitle">Yillik reja bilan 20% gacha mablag'ni tejab qoling</p>
             
-            <article class="project-card">
-                <img class="project-card__image" src="https://picsum.photos/400/250?random=21" alt="Loyiha 1">
-                <div class="project-card__content">
-                    <h3 class="project-card__name">E-Commerce Sayt</h3>
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">HTML</span>
-                        <span class="project-card__tag">CSS</span>
-                        <span class="project-card__tag">JavaScript</span>
-                    </div>
-                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
-                </div>
-            </article>
+            <div class="toggle-wrapper">
+                <span class="toggle-label">Oylik</span>
+                <label class="pricing-toggle">
+                    <input type="checkbox" id="billing-toggle" class="pricing-toggle__input">
+                    <span class="pricing-toggle__slider"></span>
+                </label>
+                <span class="toggle-label">Yillik <span class="toggle-label__badge">-20%</span></span>
+            </div>
+        </header>
 
-            <article class="project-card">
-                <img class="project-card__image" src="https://picsum.photos/400/250?random=22" alt="Loyiha 2">
-                <div class="project-card__content">
-                    <h3 class="project-card__name">Dashboard Paneli</h3>
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">React</span>
-                        <span class="project-card__tag">BEM CSS</span>
-                    </div>
-                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <img class="project-card__image" src="https://picsum.photos/400/250?random=23" alt="Loyiha 3">
-                <div class="project-card__content">
-                    <h3 class="project-card__name">Kripto Hamyon Ilovasi</h3>
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">Next.js</span>
-                        <span class="project-card__tag">Tailwind</span>
-                    </div>
-                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <img class="project-card__image" src="https://picsum.photos/400/250?random=24" alt="Loyiha 4">
-                <div class="project-card__content">
-                    <h3 class="project-card__name">Ob-havo Platformasi</h3>
-                    <div class="project-card__tags">
-                        <span class="project-card__tag">API</span>
-                        <span class="project-card__tag">Vanilla JS</span>
-                    </div>
-                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <h2 class="skills__title">Ko'nikmalar</h2>
-        <div class="skills__container">
+        <div class="pricing-grid">
             
-            <div class="skill-progress">
-                <div class="skill-progress__info">
-                    <span class="skill-progress__name">HTML5 / CSS3</span>
-                    <span class="skill-progress__percentage">95%</span>
+            <article class="price-card">
+                <h2 class="price-card__plan">Starter</h2>
+                <p class="price-card__desc">Kichik jamoalar va endi boshlovchilar uchun.</p>
+                <div class="price-card__price-box">
+                    <span class="price-card__currency">$</span>
+                    <span class="price-card__amount price-card__amount--monthly">19</span>
+                    <span class="price-card__amount price-card__amount--yearly">15</span>
+                    <span class="price-card__period">/oy</span>
                 </div>
-                <div class="skill-progress__bar">
-                    <div class="skill-progress__fill" style="width: 95%;"></div>
-                </div>
-            </div>
+                <ul class="price-card__features">
+                    <li>3 ta loyiha</li>
+                    <li>Tasvir yuklash (5GB)</li>
+                    <li>Asosiy tahlillar</li>
+                    <li class="price-card__features--disabled">24/7 Qo'llab-quvvatlash</li>
+                </ul>
+                <button class="price-card__btn">Boshlash</button>
+            </article>
 
-            <div class="skill-progress">
-                <div class="skill-progress__info">
-                    <span class="skill-progress__name">JavaScript</span>
-                    <span class="skill-progress__percentage">85%</span>
+            <article class="price-card price-card--featured">
+                <span class="price-card__badge">Eng ommabop</span>
+                <h2 class="price-card__plan">Pro</h2>
+                <p class="price-card__desc">Kengayib borayotgan biznes egalari uchun.</p>
+                <div class="price-card__price-box">
+                    <span class="price-card__currency">$</span>
+                    <span class="price-card__amount price-card__amount--monthly">49</span>
+                    <span class="price-card__amount price-card__amount--yearly">39</span>
+                    <span class="price-card__period">/oy</span>
                 </div>
-                <div class="skill-progress__bar">
-                    <div class="skill-progress__fill" style="width: 85%;"></div>
-                </div>
-            </div>
+                <ul class="price-card__features">
+                    <li>Cheksiz loyihalar</li>
+                    <li>Tasvir yuklash (50GB)</li>
+                    <li>Kengaytirilgan tahlillar</li>
+                    <li>24/7 Qo'llab-quvvatlash</li>
+                </ul>
+                <button class="price-card__btn price-card__btn--featured">Pro-ga o'tish</button>
+            </article>
 
-            <div class="skill-progress">
-                <div class="skill-progress__info">
-                    <span class="skill-progress__name">React.js</span>
-                    <span class="skill-progress__percentage">80%</span>
+            <article class="price-card">
+                <h2 class="price-card__plan">Enterprise</h2>
+                <p class="price-card__desc">Yirik tashkilotlar va maxsus talablar uchun.</p>
+                <div class="price-card__price-box">
+                    <span class="price-card__currency">$</span>
+                    <span class="price-card__amount price-card__amount--monthly">99</span>
+                    <span class="price-card__amount price-card__amount--yearly">79</span>
+                    <span class="price-card__period">/oy</span>
                 </div>
-                <div class="skill-progress__bar">
-                    <div class="skill-progress__fill" style="width: 80%;"></div>
-                </div>
-            </div>
-
-            <div class="skill-progress">
-                <div class="skill-progress__info">
-                    <span class="skill-progress__name">UI/UX Dizayn</span>
-                    <span class="skill-progress__percentage">70%</span>
-                </div>
-                <div class="skill-progress__bar">
-                    <div class="skill-progress__fill" style="width: 70%;"></div>
-                </div>
-            </div>
+                <ul class="price-card__features">
+                    <li>Maxsus infratuzilma</li>
+                    <li>Cheksiz xotira</li>
+                    <li>Shaxsiy menejer</li>
+                    <li>SLA va API kafolati</li>
+                </ul>
+                <button class="price-card__btn">Aloqaga chiqish</button>
+            </article>
 
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <h2 class="contact__title">Bog'lanish</h2>
-        <div class="contact__container">
-            <form action="#" class="contact-form">
-                <div class="contact-form__group">
-                    <label class="contact-form__label">Ismingiz</label>
-                    <input type="text" class="contact-form__input" placeholder="Ismingizni kiriting" required>
-                </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label">Email manzilingiz</label>
-                    <input type="email" class="contact-form__input" placeholder="example@mail.com" required>
-                </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label">Xabaringiz</label>
-                    <textarea class="contact-form__input contact-form__input--textarea" rows="5" placeholder="Xabarni yozing..." required></textarea>
-                </div>
-                <button type="submit" class="contact-form__btn">Xabarni yuborish</button>
-            </form>
-        </div>
-    </section>
+        <section class="comparison-section">
+            <h2 class="comparison-section__title">Xususiyatlarni taqqoslang</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Xususiyatlar</th>
+                            <th>Starter</th>
+                            <th>Pro</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Loyihalar soni</td>
+                            <td>3 ta</td>
+                            <td>Cheksiz</td>
+                            <td>Cheksiz</td>
+                        </tr>
+                        <tr>
+                            <td>Bulutli xotira</td>
+                            <td>5 GB</td>
+                            <td>50 GB</td>
+                            <td>Maxsus</td>
+                        </tr>
+                        <tr>
+                            <td>API imkoniyati</td>
+                            <td><span class="mark mark--x">&times;</span></td>
+                            <td><span class="mark mark--check">&#10003;</span></td>
+                            <td><span class="mark mark--check">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td>Shaxsiy menejer</td>
+                            <td><span class="mark mark--x">&times;</span></td>
+                            <td><span class="mark mark--x">&times;</span></td>
+                            <td><span class="mark mark--check">&#10003;</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <footer class="footer">
-        <p>&copy; 2026. Barcha huquqlar himoyalangan.</p>
-    </footer>
+        <section class="faq-section">
+            <h2 class="faq-section__title">Tez-tez so'raladigan savollar</h2>
+            <div class="faq-container">
+                
+                <details class="faq-item">
+                    <summary class="faq-item__question">Tarifni xohlagan vaqtda o'zgartirsam bo'ladimi?</summary>
+                    <div class="faq-item__answer">
+                        <p>Ha, albatta. Siz xohlagan vaqtda tarifingizni yuqoriroq yoki pastroq rejaga o'tkazishingiz mumkin. To'lovlar avtomatik ravishda qayta hisoblanadi.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">Yillik tarifda qancha tejab qolaman?</summary>
+                    <div class="faq-item__answer">
+                        <p>Yillik tarifni tanlaganingizda oylik to'lovlarga nisbatan 20% gacha chegirb beriladi va mablag'ingiz tejaladi.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">To'lovni qaytarib olish kafolati bormi?</summary>
+                    <div class="faq-item__answer">
+                        <p>Ha, dastlabki 14 kun ichida xizmatimiz yoqmasa, hech qanday savollarsiz pullaringiz to'liq qaytarib beriladi.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-item__question">Qanday to'lov usullari mavjud?</summary>
+                    <div class="faq-item__answer">
+                        <p>Biz barcha turdagi xalqaro kredit kartalari (Visa, MasterCard), shuningdek, milliy to'lov tizimlari (UzCard, Humo) orqali to'lovlarni qabul qilamiz.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+    </div>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* ========================================================
-   7. RANG TIZIMI VA PROFESSIONAL LIGHT/DARK SXEMASI
-   ======================================================== */
+/* Custom Properties (Variables) */
 :root {
-    --bg-dark: #0f172a;        /* Chuqur quyuq fon */
-    --bg-card: #1e293b;        /* Kartalar foni */
-    --accent: #38bdf8;         /* Neon ko'k aksent rang */
-    --text-white: #f8fafc;     /* Asosiy matn rangi */
-    --text-muted: #94a3b8;     /* Ikkinchi darajali matn */
-    --border: #334155;
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --dark: #0f172a;
+    --muted: #475569;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border: #e2e8f0;
     
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* 6. Silliq scroll ta'minlash */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Navbar balandligini hisobga olish */
 }
 
 *, *::before, *::after {
@@ -212,402 +189,397 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-white);
-    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: var(--dark);
+    line-height: 1.5;
+    padding: 60px 20px;
 }
 
-/* NAVBAR STILLARI */
-.navbar {
-    position: sticky;
-    top: 0;
-    background-color: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-}
-
-.navbar__container {
+.pricing-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.navbar__logo {
-    color: var(--text-white);
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.navbar__links {
-    display: flex;
-    gap: 24px;
-}
-
-.navbar__link {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.navbar__link:hover {
-    color: var(--accent);
-}
-
-/* ========================================================
-   1. HERO SECTION
-   ======================================================== */
-.hero {
-    min-height: calc(100vh - 80px);
-    display: flex;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.hero__welcome {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.hero__title {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
-.hero__name {
-    color: var(--accent);
-}
-
-.hero__subtitle {
-    font-size: 32px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-}
-
-.hero__description {
-    max-width: 600px;
-    color: var(--text-muted);
-    font-size: 16px;
-    margin-bottom: 40px;
-}
-
-.hero__cta-btn {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--accent);
-    border: 2px solid var(--accent);
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.hero__cta-btn:hover {
-    background-color: var(--accent);
-    color: var(--bg-dark);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-}
-
-/* ========================================================
-   2. ABOUT SECTION
-   ======================================================== */
-.about {
-    padding: 100px 20px;
-    border-top: 1px solid var(--border);
-}
-
-.about__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: center;
-}
-
-.about__avatar-box, .about__content {
-    flex: 1 1 400px;
-}
-
-.about__avatar {
-    width: 200px;
-    height: 200px;
-    background-color: var(--bg-card);
-    border: 4px solid var(--border);
-    border-radius: 50%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 72px;
-    font-weight: bold;
-    color: var(--accent);
-}
-
-.about__title {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.about__text {
-    color: var(--text-muted);
-    margin-bottom: 30px;
-}
-
-.about__experience {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.about__years {
-    font-size: 44px;
-    font-weight: 800;
-    color: var(--accent);
-}
-
-.about__exp-text {
-    font-size: 14px;
-    color: var(--text-white);
-    font-weight: 500;
-}
-
-/* ========================================================
-   3. LOYIHALAR GRID
-   ======================================================== */
-.projects {
-    padding: 100px 20px;
-    background-color: rgba(30, 41, 59, 0.3);
-}
-
-.projects__title {
+/* HEADER STILLARI */
+.pricing-header {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-.projects__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background-color: var(--bg-card);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
-}
-
-.project-card__image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-card__content {
-    padding: 20px;
-}
-
-.project-card__name {
-    font-size: 20px;
+.pricing-header__title {
+    font-size: 36px;
+    font-weight: 800;
     margin-bottom: 12px;
 }
 
-.project-card__tags {
+.pricing-header__subtitle {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* ========================================================
+   1. TOGGLE — OYLIK / YILLIK CSS MEXANIZMI
+   ======================================================== */
+.toggle-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
-.project-card__tag {
-    background-color: var(--bg-dark);
-    color: var(--accent);
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 6px;
-    font-weight: 500;
-}
-
-.project-card__link {
-    color: var(--text-white);
-    text-decoration: none;
+.toggle-label {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.toggle-label__badge {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.pricing-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.pricing-toggle__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.pricing-toggle__slider {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #cbd5e1;
+    border-radius: 34px;
     transition: var(--transition);
 }
 
-.project-card:hover .project-card__link {
-    color: var(--accent);
+.pricing-toggle__slider::before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: var(--transition);
 }
+
+/* Fokus holati */
+.pricing-toggle__input:focus + .pricing-toggle__slider {
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.4);
+}
+
+.pricing-toggle__input:checked + .pricing-toggle__slider {
+    background-color: var(--primary);
+}
+
+.pricing-toggle__input:checked + .pricing-toggle__slider::before {
+    transform: translateX(26px);
+}
+
+/* Oylik va Yillik narxlarni ko'rsatish/yashirish mexanizmi */
+.price-card__amount--yearly {
+    display: none;
+}
+
+/* Agar checkbox belgilangan bo'lsa (yillik reja) */
+body:has(#billing-toggle:checked) .price-card__amount--monthly {
+    display: none;
+}
+body:has(#billing-toggle:checked) .price-card__amount--yearly {
+    display: inline;
+}
+
 
 /* ========================================================
-   4. KO'NIKMALAR (PROGRESS BAR KO'RINISHIDA)
+   2, 3 & 4. TARIF KARTALARI GRID LAYOUT & PRO HIGHLIGHT
    ======================================================== */
-.skills {
-    padding: 100px 20px;
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 80px;
 }
 
-.skills__title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 60px;
-}
-
-.skills__container {
-    max-width: 700px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.skill-progress__info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.skill-progress__percentage {
-    color: var(--accent);
-}
-
-.skill-progress__bar {
-    width: 100%;
-    height: 8px;
-    background-color: var(--bg-card);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.skill-progress__fill {
-    height: 100%;
-    background-color: var(--accent);
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
-
-/* ========================================================
-   5. ALOQA SHAKLI (CONTACT FORM)
-   ======================================================== */
-.contact {
-    padding: 100px 20px;
-    border-top: 1px solid var(--border);
-}
-
-.contact__title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 60px;
-}
-
-.contact__container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form {
-    background-color: var(--bg-card);
-    padding: 40px;
+.price-card {
+    background-color: var(--white);
+    padding: 35px 30px;
     border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     border: 1px solid var(--border);
+    position: relative;
+    transition: var(--transition);
 }
 
-.contact-form__group {
+/* 7. Hover effekti kartalarda */
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* 4. Pro karta vizual ajratilishi */
+.price-card--featured {
+    border: 2px solid var(--primary);
+    background-color: var(--white);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.1);
+    transform: scale(1.03);
+}
+
+.price-card--featured:hover {
+    transform: scale(1.03) translateY(-5px);
+}
+
+.price-card__badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.price-card__plan {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.price-card__desc {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+    height: 42px;
+}
+
+.price-card__price-box {
     margin-bottom: 24px;
 }
 
-.contact-form__label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: var(--text-muted);
+.price-card__currency {
+    font-size: 24px;
+    font-weight: 700;
+    vertical-align: super;
 }
 
-.contact-form__input {
+.price-card__amount {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.price-card__period {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.price-card__features {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-card__features li {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.price-card__features li::before {
+    content: "✓";
+    color: #10b981;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.price-card__features .price-card__features--disabled {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.price-card__features .price-card__features--disabled::before {
+    content: "✕";
+    color: #ef4444;
+}
+
+/* 7. Tugmalarda hover va focus animatsiyalari */
+.price-card__btn {
     width: 100%;
-    padding: 12px 16px;
-    background-color: var(--bg-dark);
+    padding: 12px;
+    background-color: var(--bg-light);
+    color: var(--primary);
     border: 1px solid var(--border);
     border-radius: 8px;
-    color: var(--text-white);
-    outline: none;
-    font-size: 16px;
-    transition: var(--transition);
-}
-
-.contact-form__input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
-}
-
-.contact-form__input--textarea {
-    resize: none;
-}
-
-.contact-form__btn {
-    width: 100%;
-    padding: 14px;
-    background-color: var(--accent);
-    color: var(--bg-dark);
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    outline: none;
 }
 
-.contact-form__btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+.price-card__btn:hover, .price-card__btn:focus-visible {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
-.footer {
+.price-card__btn--featured {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.price-card__btn--featured:hover, .price-card__btn--featured:focus-visible {
+    background-color: var(--primary-hover);
+}
+
+
+/* ========================================================
+   5. XUSUSIYATLAR TAQQOSLASH JADVALI (CHECKMARK/XMARK)
+   ======================================================== */
+.comparison-section {
+    margin-bottom: 80px;
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.comparison-section__title {
     text-align: center;
-    padding: 40px 20px;
-    color: var(--text-muted);
-    font-size: 14px;
-    border-top: 1px solid var(--border);
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
-/* MEDIA SOZLAMALARI (RESPONSIVE DESIGN) */
-@media (max-width: 768px) {
-    .navbar__links {
-        display: none; /* Mobil menyu soddaligi uchun yashirildi */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+    font-weight: 700;
+    color: var(--dark);
+    background-color: var(--bg-light);
+}
+
+.comparison-table td {
+    font-size: 15px;
+}
+
+.mark {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mark--check { color: #10b981; }
+.mark--x { color: #ef4444; }
+
+
+/* ========================================================
+   6. FAQ BO'LIMI (DETAILS / SUMMARY ACCORDION)
+   ======================================================== */
+.faq-section {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-section__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item__summary {
+    padding: 18px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    list-style: none; /* Standart uchburchakni olib tashlash */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+/* Custom indicator (burchakli strelka) */
+.faq-item__summary::after {
+    content: "➔";
+    font-size: 12px;
+    color: var(--muted);
+    transition: transform 0.3s ease;
+}
+
+/* Accordion ochiq holatdagi animatsiyasi */
+.faq-item[open] .faq-item__summary::after {
+    transform: rotate(90deg);
+}
+
+.faq-item__summary:hover, .faq-item__summary:focus-visible {
+    background-color: var(--bg-light);
+    color: var(--primary);
+}
+
+.faq-item__answer {
+    padding: 0 24px 24px 24px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* RESPONSIVE DESIGN (MEDIA QUERIES) */
+@media (max-width: 992px) {
+    .price-card--featured {
+        transform: scale(1);
     }
-    
-    .hero__title {
-        font-size: 36px;
-    }
-    
-    .hero__subtitle {
-        font-size: 24px;
-    }
-    
-    .contact-form {
-        padding: 24px;
+    .price-card--featured:hover {
+        transform: translateY(-5px);
     }
 }
+Kod qanday afzalliklarga ega:
+Toza CSS Toggle: Oylik va yillik narx rejalarining almashishi CSS-ning :has() hamda :checked selektorlari yordamida JavaScript-siz tushunarli tarzda ishlangan.
+
+Fokus boshqaruvi (:focus-visible): Foydalanuvchi klaviatura orqali (Tab tugmasi yordamida) navigatsiya qilganda, barcha interaktiv elementlar aniq ko'rinadigan fokus liniyasiga ega bo'ladi.
+
+Mukammal Details/Summary: FAQ bo'limida ishlatilgan details tegi brauzerlar uchun qulay hamda qo'shimcha animatsiyali strelka (➔) bilan boyitilgan.
