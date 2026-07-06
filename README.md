@@ -1,111 +1,103 @@
 # html-css-ni-ohrguihrguwurighwrg
+Mana, 3D chuqurlik effektiga ega va hover bo'lganda 180° silliq ag'dariladigan 3D karta (Flip Card) kodi.
+
+1. HTML fayli (index.html)
+HTML
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ag'dariluvchi Karta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="flip-card-container">
+        <div class="flip-card">
+            
+            <div class="card-face card-front">
+                <h2>Old Tomon</h2>
+                <p>Sichqonchani ustiga olib keling</p>
+            </div>
+            
+            <div class="card-face card-back">
+                <h2>Orqa Tomon</h2>
+                <p>Muvaffaqiyatli ag'darildi!</p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+2. CSS fayli (style.css)
 CSS
-/* ========================================================
-   4. ::before bilan custom list marker (standart bullet yo'q)
-   ======================================================== */
-ul {
-    list-style: none; /* Standart nuqtalarni olib tashlaymiz */
-    padding-left: 20px;
+/* Sahifa markazi uchun umumiy stillar */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-ul li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 25px; /* Marker uchun joy ajratamiz */
-    color: #333;
+/* 1. Karta uchun 3D chuqurlik muhiti */
+.flip-card-container {
+    width: 300px;
+    height: 400px;
+    /* perspective 3D chuqurlik hissini beradi. Qiymat qancha kichik bo'lsa, effekt shuncha yaqin ko'rinadi */
+    perspective: 1000px; 
 }
 
-ul li::before {
-    content: "✦"; /* Custom marker shakli (xohlagan belgi yoki emoji bo'lishi mumkin) */
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #3498db; /* Marker rangi */
-    font-weight: bold;
-}
-
-
-/* ========================================================
-   5. ::after yoki ::before bilan blockquote tirnoq bezagi
-   ======================================================== */
-blockquote {
-    position: relative;
-    font-style: italic;
-    font-size: 18px;
-    color: #555;
-    padding: 20px 40px;
-    margin: 20px auto;
-    max-width: 500px;
-    background: #fff;
-    border-left: 5px solid #e74c3c; /* Chap tomondagi rangli chiziq */
-}
-
-/* Ochuvchi tirnoq */
-blockquote::before {
-    content: "“";
-    position: absolute;
-    left: 10px;
-    top: -10px;
-    font-size: 60px;
-    color: #e74c3c;
-    opacity: 0.3; /* Tirnoq orqafonda xira ko'rinishi uchun */
-    font-family: Georgia, serif;
-}
-
-/* Yopuvchi tirnoq */
-blockquote::after {
-    content: "”";
-    position: absolute;
-    right: 10px;
-    bottom: -30px;
-    font-size: 60px;
-    color: #e74c3c;
-    opacity: 0.3;
-    font-family: Georgia, serif;
-}
-
-
-/* ========================================================
-   6. :nth-child bilan jadval qatorlari almashinib ranglanishi
-   ======================================================== */
-table {
+/* 2. Aylanishni amalga oshiradigan ichki blok */
+.flip-card {
     width: 100%;
-    max-width: 600px;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    position: relative;
+    /* Ichki elementlar (old/orqa tomonlar) ham 3D fazoda qolishi uchun */
+    transform-style: preserve-3d;
+    /* Silliq ag'darilish effekti uchun transition */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+/* Hover paytida kartani Y o'qi bo'yicha 180 gradusga buramiz */
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
 }
 
-th {
-    background-color: #34495e;
+/* 3. Kartaning ikkala tomoni uchun umumiy qoidalar */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    
+    /* Ichidagi matnlarni markazlashtirish */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Orqa tomondagi element teskari turganda ko'rinmasligi uchun eng muhim xossa */
+    backface-visibility: hidden; 
+}
+
+/* 4. Faqat old tomon stili */
+.card-front {
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
 }
 
-/* Juft oʻrindagi qatorlar (2, 4, 6...) uchun och kulrang fon */
-table tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
+/* 5. Faqat orqa tomon stili */
+.card-back {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    /* Orqa tomon boshlang'ich holatda 180 gradus burilib, old tomonning orqasida tayyor turadi */
+    transform: rotateY(180deg);
 }
-
-/* Toq oʻrindagi qatorlar (1, 3, 5...) uchun oq fon */
-table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-/* Sichqoncha qator ustiga kelganda ajralib turishi uchun hover effekti */
-table tbody tr:hover {
-    background-color: #f1f2f6;
-    transition: background-color 0.2s ease;
-}
-Bu qanday ishlaydi?
-Custom List: list-style: none orqali standart brauzer nuqtalari oʻchiriladi va ::before psevdo-elementi yordamida har bir li elementining oldiga mutlaq koordinata (position: absolute) bilan maxsus belgi qoʻyiladi.
-
-Blockquote: Matnning ustiga chiqib ketmasligi uchun katta oʻlchamdagi tirnoqlarga opacity: 0.3 (shaffoflik) berildi.
-
-Jadval: :nth-child(even) selektori jadvaldagi faqat juft qatorlarni tanlab oladi va ularga alohida rang beradi,
