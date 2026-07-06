@@ -1,4 +1,6 @@
 # html-css-ni-ohrguihrguwurighwrg
+Mana, so'ralgan barcha talablarga javob beradigan, zamonaviy dizayndagi, to'liq responsive (mobil qurilmalarga moslashuvchan) veb-sahifa andozasi.
+
 1. HTML fayli (index.html)
 HTML
 <!DOCTYPE html>
@@ -6,234 +8,343 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEM Metodologiyasi Bo'yicha Kartalar</title>
+    <title>Zamonaviy Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page-body">
+<body class="page">
 
-    <div class="card-grid">
-        
-        <article class="card">
-            <div class="card__image-container">
-                <img class="card__image" src="https://picsum.photos/300/200?random=1" alt="Mahsulot rasmi">
-            </div>
-            <div class="card__content">
-                <h3 class="card__title">Zamonaviy Krossovka</h3>
-                <p class="card__description">Kundalik kiyish va sport bilan shug'ullanish uchun juda qulay va yengil krossovka.</p>
-                <div class="card__price-box">
-                    <span class="card__price">450,000 so'm</span>
+    <header class="hero">
+        <div class="hero__container">
+            <h1 class="hero__title">Biznesingizni Raqamli Dunyoga Olib Chiqing</h1>
+            <p class="hero__description">Kompaniyangiz uchun zamonaviy veb-saytlar, mobil ilovalar va brending xizmatlarini yuqori sifatda taqdim etamiz.</p>
+            <a href="#services" class="hero__btn">Xizmatlar bilan tanishish</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <h2 class="services__main-title">Bizning Xizmatlar</h2>
+        <div class="services__grid">
+            
+            <article class="service-card">
+                <div class="service-card__icon">💻</div>
+                <h3 class="service-card__title">Web Dasturlash</h3>
+                <p class="service-card__text">Har qanday murakkablikdagi tezkor va xavfsiz veb-saytlarni yaratish.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card__icon">📱</div>
+                <h3 class="service-card__title">Mobil Ilovalar</h3>
+                <p class="service-card__text">iOS va Android platformalari uchun qulay va chiroyli ilovalar.</p>
+            </article>
+
+            <article class="service-card">
+                <div class="service-card__icon">🎨</div>
+                <h3 class="service-card__title">UI/UX Dizayn</h3>
+                <p class="service-card__text">Foydalanuvchilarga ma'qul keladigan zamonaviy va interaktiv interfeyslar.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="testimonials__main-title">Mijozlarimiz Fikrlari</h2>
+        <div class="testimonials__flex">
+            
+            <div class="review-card">
+                <p class="review-card__text">"Ushbu jamoa bilan ishlash juda yoqimli bo'ldi. Veb-saytimizni aytilgan muddatdan oldin va mukammal tarzda topshirishdi!"</p>
+                <div class="review-card__author">
+                    <span class="review-card__name">Asrorbekov Sardor</span>
+                    <span class="review-card__company">"TechCorp" rahbari</span>
                 </div>
-                <button class="card__button">Sotib olish</button>
             </div>
-        </article>
 
-        <article class="card card--sale">
-            <div class="card__image-container">
-                <span class="card__badge card__badge--sale">Chegirma</span>
-                <img class="card__image" src="https://picsum.photos/300/200?random=2" alt="Mahsulot rasmi">
-            </div>
-            <div class="card__content">
-                <h3 class="card__title">Aqlli Soat Pro</h3>
-                <p class="card__description">Yurak urishi, uyqu va sport faolligini kuzatuvchi eng so'nggi modeldagi aqlli soat.</p>
-                <div class="card__price-box">
-                    <span class="card__price card__price--old">800,000 so'm</span>
-                    <span class="card__price card__price--current">599,000 so'm</span>
+            <div class="review-card">
+                <p class="review-card__text">"Ajoyib dizayn va yuqori sifat. Mobil ilovamiz ishga tushganidan so'ng mijozlarimiz soni ikki barobarga ko'paydi."</p>
+                <div class="review-card__author">
+                    <span class="review-card__name">Malika Karimova</span>
+                    <span class="review-card__company">"GreenFood" asoschisi</span>
                 </div>
-                <button class="card__button">Sotib olish</button>
             </div>
-        </article>
 
-        <article class="card card--new">
-            <div class="card__image-container">
-                <span class="card__badge card__badge--new">Yangi</span>
-                <img class="card__image" src="https://picsum.photos/300/200?random=3" alt="Mahsulot rasmi">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__info">
+                <h4 class="footer__title">Aloqa</h4>
+                <p class="footer__text">Telefon: +998 (90) 123-45-67</p>
+                <p class="footer__text">Email: info@example.com</p>
             </div>
-            <div class="card__content">
-                <h3 class="card__title">Simsiz Quloqchinlar</h3>
-                <p class="card__description">Yuqori sifatli ovoz va shovqinni to'suvchi (ANC) tizimiga ega simsiz quloqchin.</p>
-                <div class="card__price-box">
-                    <span class="card__price">350,000 so'm</span>
+            <div class="footer__socials">
+                <h4 class="footer__title">Ijtimoiy tarmoqlar</h4>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">Telegram</a>
+                    <a href="#" class="footer__link">Instagram</a>
+                    <a href="#" class="footer__link">LinkedIn</a>
                 </div>
-                <button class="card__button">Sotib olish</button>
             </div>
-        </article>
-
-    </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* Sahifa uchun umumiy BEM stillari */
-.page-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fa;
-    margin: 0;
-    padding: 40px 20px;
+/* ========================================================
+   6. CSS CUSTOM PROPERTIES (VARIABLES)
+   ======================================================== */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #0f172a;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.card-grid {
+/* Umumiy reset qoidalari */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+}
+
+/* ========================================================
+   1. HERO SECTION STILLARI
+   ======================================================== */
+.hero {
+    background: linear-gradient(135deg, var(--secondary-color), #1e293b);
+    color: var(--bg-white);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+/* 7. Hover animatsiyasi (Tugma) */
+.hero__btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.hero__btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ========================================================
+   2. FEATURES/SERVICES SECTION (GRID ORQALI RESPONSIVE)
+   ======================================================== */
+.services {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.services__main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* 5. Grid bilan responsive joylashuv */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: var(--bg-white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.service-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card__title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.service-card__text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* 7. Hover animatsiyasi (Karta) */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ========================================================
+   3. TESTIMONIALS SECTION (FLEXBOX ORQALI RESPONSIVE)
+   ======================================================== */
+.testimonials {
+    padding: 80px 20px;
+}
+
+.testimonials__main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* 5. Flexbox bilan responsive joylashuv */
+.testimonials__flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-/* ========================================================
-   BEM: BLOCK (Karta asosiy bloki)
-   ======================================================== */
-.card {
-    background-color: #ffffff;
+.review-card {
+    background-color: var(--bg-light);
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e1e8ed;
+    flex: 1 1 450px; /* Minimal 450px joy egallaydi, joy qolmasa pastga tushadi */
+    max-width: 520px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* ========================================================
-   BEM: MODIFIERS (Blok darajasidagi modifikatorlar)
-   ======================================================== */
-/* Aksiyadagi karta uchun maxsus chegirma foni yoki burchak rangi */
-.card--sale {
-    border: 1px solid #ff4d4f;
-    background-color: #fff1f0;
-}
-
-/* Yangi mahsulot kartasi uchun maxsus yashil tusli jilo */
-.card--new {
-    border: 1px solid #73d13d;
-    background-color: #f6ffed;
-}
-
-/* ========================================================
-   BEM: ELEMENTS (Blok ichidagi elementlar)
-   ======================================================== */
-.card__image-container {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-color: #eaeff2;
-}
-
-.card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card__content {
-    padding: 20px;
-}
-
-.card__title {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-    color: #1f2937;
-    font-weight: 600;
-}
-
-.card__description {
-    margin: 0 0 20px 0;
-    font-size: 14px;
-    color: #4b5563;
-    line-height: 1.5;
-    height: 63px; /* Matnlar bir xil tekislikda turishi uchun fixed balandlik */
-    overflow: hidden;
-}
-
-.card__price-box {
+.review-card__text {
+    font-style: italic;
+    color: var(--text-dark);
     margin-bottom: 20px;
+}
+
+.review-card__author {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
 }
 
-.card__price {
-    font-size: 18px;
+.review-card__name {
     font-weight: 700;
-    color: #1f2937;
 }
 
-/* Element ichidagi modifikatorlar (E__A--B) */
-.card__price--old {
-    font-size: 14px;
-    color: #9ca3af;
-    text-decoration: line-through;
-    font-weight: 400;
+.review-card__company {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-.card__price--current {
-    color: #ff4d4f;
-    font-size: 20px;
+/* ========================================================
+   4. FOOTER STILLARI
+   ======================================================== */
+.footer {
+    background-color: var(--secondary-color);
+    color: #94a3b8;
+    padding: 60px 20px 20px 20px;
 }
 
-.card__badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 4px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #ffffff;
-    border-radius: 4px;
-    z-index: 1;
+/* 5. Flexbox orqali footer komponentlarini ajratish */
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 40px;
 }
 
-.card__badge--sale {
-    background-color: #ff4d4f;
+.footer__title {
+    color: var(--bg-white);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-.card__badge--new {
-    background-color: #73d13d;
+.footer__text {
+    margin-bottom: 10px;
 }
 
-.card__button {
-    width: 100%;
-    padding: 10px 0;
-    background-color: #2f54eb;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.footer__links {
+    display: flex;
+    gap: 20px;
 }
 
-.card__button:hover {
-    background-color: #1d39c4;
+.footer__link {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-/* Modifikatorli kartalarning ichidagi tugma ranglarini moslash */
-.card--sale .card__button {
-    background-color: #ff4d4f;
+.footer__link:hover {
+    color: var(--bg-white);
 }
 
-.card--sale .card__button:hover {
-    background-color: #d9363e;
+.footer__bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
 }
 
-.card--new .card__button {
-    background-color: #73d13d;
+/* ========================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ======================================================== */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__links {
+        justify-content: center;
+    }
 }
-
-.card--new .card__button:hover {
-    background-color: #52c41a;
-}
-BEM qoidalariga rioya etilishi tahlili:
-Blok (.card): Mustaqil komponent bo'lib, o'z funksiyasiga ega.
-
-Elementlar (.card__image, .card__title, .card__button): Faqat blok ichida ma'noga ega bo'lgan va blok nomiga ikki tag-chiziq (__) bilan yopishgan elementlar.
-
-Modifikatorlar (.card--sale, .card--new, .card__badge--sale): Blok yoki elementning holati yoki ko'rinishini o'zgartirish uchun ikki chiziq (--) bilan qo'shilgan klasslar.
-
-Teg selektorlarisiz: CSS-da birorta ham div, img, h3,
