@@ -1,5 +1,5 @@
 # html-css-ni-ohrguihrguwurighwrgcard__detai
-Elektron tijorat (E-commerce) tizimlari uchun eng ko'p ishlatiladigan interaktiv mahsulot sahifasining (Product Detail Page) HTML va CSS kodlari. Dizayn to'liq responsive bo'lib, o'ng tomondagi ma'lumotlar qismi Flexbox yordamida joylashtirilgan.
+Mana, shaxsiy portfolioga mo'ljallangan, professional light/dark muvozanatiga ega, to'liq responsive HTML va CSS kodlari. Sahifada bo'limlararo o'tish silliq scroll (scroll-behavior: smooth) orqali amalga oshiriladi.
 
 1. HTML fayli (index.html)
 HTML
@@ -8,120 +8,200 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahsulot Sahifasi</title>
+    <title>Shaxsiy Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="product-page">
+<body class="portfolio">
 
-    <div class="product-container">
-        
-        <section class="product-gallery">
-            <div class="product-gallery__main-wrapper">
-                <img class="product-gallery__main" src="https://picsum.photos/600/600?random=10" alt="Asosiy mahsulot rasmi">
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#" class="navbar__logo">Portfolio.</a>
+            <div class="navbar__links">
+                <a href="#hero" class="navbar__link">Asosiy</a>
+                <a href="#about" class="navbar__link">Men haqimda</a>
+                <a href="#projects" class="navbar__link">Loyihalar</a>
+                <a href="#skills" class="navbar__link">Ko'nikmalar</a>
+                <a href="#contact" class="navbar__link">Aloqa</a>
             </div>
-            <div class="product-gallery__thumbnails">
-                <img class="product-gallery__thumb product-gallery__thumb--active" src="https://picsum.photos/600/600?random=10" alt="Thumbnail 1">
-                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=11" alt="Thumbnail 2">
-                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=12" alt="Thumbnail 3">
-                <img class="product-gallery__thumb" src="https://picsum.photos/600/600?random=13" alt="Thumbnail 4">
-            </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="product-details">
-            <h1 class="product-details__title">Premium Charm Krossovka</h1>
+    <header id="hero" class="hero">
+        <div class="hero__container">
+            <span class="hero__welcome">Assalomu alaykum!</span>
+            <h1 class="hero__title">Men <span class="hero__name">Asrorbek</span></h1>
+            <h2 class="hero__subtitle">Frontend Dasturchi</h2>
+            <p class="hero__description">Zamonaviy, tezkor va foydalanuvchilar uchun qulay veb-interfeyslarni yaratish bilan shug'ullanaman.</p>
+            <a href="#" class="hero__cta-btn" download>CV Yuklab Olish</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about__container">
+            <div class="about__avatar-box">
+                <div class="about__avatar">A</div>
+            </div>
+            <div class="about__content">
+                <h2 class="about__title">Men haqimda</h2>
+                <p class="about__text">Men veb-dasturlash olamiga qiziqaman va har bir loyihaga ijodiy yondashaman. Kod yozish bilan birga dizaynning mukammal chiqishiga ham katta e'tibor qarataman.</p>
+                <div class="about__experience">
+                    <span class="about__years">3+</span>
+                    <span class="about__exp-text">Yillik amaliy<br>tajriba</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="projects__title">Mening loyihalarim</h2>
+        <div class="projects__grid">
             
-            <div class="product-details__rating">
-                <span class="product-details__stars">★★★★☆</span>
-                <span class="product-details__reviews">(4.8 / 120 ta sharh)</span>
-            </div>
+            <article class="project-card">
+                <img class="project-card__image" src="https://picsum.photos/400/250?random=21" alt="Loyiha 1">
+                <div class="project-card__content">
+                    <h3 class="project-card__name">E-Commerce Sayt</h3>
+                    <div class="project-card__tags">
+                        <span class="project-card__tag">HTML</span>
+                        <span class="project-card__tag">CSS</span>
+                        <span class="project-card__tag">JavaScript</span>
+                    </div>
+                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
+                </div>
+            </article>
 
-            <div class="product-details__price-box">
-                <span class="product-details__price">850,000 so'm</span>
-                <span class="product-details__old-price">1,100,000 so'm</span>
-            </div>
+            <article class="project-card">
+                <img class="project-card__image" src="https://picsum.photos/400/250?random=22" alt="Loyiha 2">
+                <div class="project-card__content">
+                    <h3 class="project-card__name">Dashboard Paneli</h3>
+                    <div class="project-card__tags">
+                        <span class="project-card__tag">React</span>
+                        <span class="project-card__tag">BEM CSS</span>
+                    </div>
+                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
+                </div>
+            </article>
 
-            <p class="product-details__description">
-                Yuqori sifatli tabiiy charm va qulay ortopedik taglikka ega bo'lgan ushbu krossovka kundalik kiyish hamda faol hayot tarzi uchun maxsus ishlab chiqilgan.
-            </p>
+            <article class="project-card">
+                <img class="project-card__image" src="https://picsum.photos/400/250?random=23" alt="Loyiha 3">
+                <div class="project-card__content">
+                    <h3 class="project-card__name">Kripto Hamyon Ilovasi</h3>
+                    <div class="project-card__tags">
+                        <span class="project-card__tag">Next.js</span>
+                        <span class="project-card__tag">Tailwind</span>
+                    </div>
+                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
+                </div>
+            </article>
 
-            <hr class="product-details__divider">
+            <article class="project-card">
+                <img class="project-card__image" src="https://picsum.photos/400/250?random=24" alt="Loyiha 4">
+                <div class="project-card__content">
+                    <h3 class="project-card__name">Ob-havo Platformasi</h3>
+                    <div class="project-card__tags">
+                        <span class="project-card__tag">API</span>
+                        <span class="project-card__tag">Vanilla JS</span>
+                    </div>
+                    <a href="#" class="project-card__link">Ko'rish &rarr;</a>
+                </div>
+            </article>
 
-            <div class="product-option">
-                <span class="product-option__title">Rang:</span>
-                <div class="product-option__swatches">
-                    <label class="color-swatch">
-                        <input type="radio" name="color" checked>
-                        <span class="color-swatch__visual color-swatch__visual--black"></span>
-                    </label>
-                    <label class="color-swatch">
-                        <input type="radio" name="color">
-                        <span class="color-swatch__visual color-swatch__visual--blue"></span>
-                    </label>
-                    <label class="color-swatch">
-                        <input type="radio" name="color">
-                        <span class="color-swatch__visual color-swatch__visual--brown"></span>
-                    </label>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="skills__title">Ko'nikmalar</h2>
+        <div class="skills__container">
+            
+            <div class="skill-progress">
+                <div class="skill-progress__info">
+                    <span class="skill-progress__name">HTML5 / CSS3</span>
+                    <span class="skill-progress__percentage">95%</span>
+                </div>
+                <div class="skill-progress__bar">
+                    <div class="skill-progress__fill" style="width: 95%;"></div>
                 </div>
             </div>
 
-            <div class="product-option">
-                <span class="product-option__title">O'lcham:</span>
-                <div class="product-option__swatches">
-                    <label class="size-swatch">
-                        <input type="radio" name="size">
-                        <span class="size-swatch__visual">40</span>
-                    </label>
-                    <label class="size-swatch">
-                        <input type="radio" name="size" checked>
-                        <span class="size-swatch__visual">41</span>
-                    </label>
-                    <label class="size-swatch">
-                        <input type="radio" name="size">
-                        <span class="size-swatch__visual">42</span>
-                    </label>
-                    <label class="size-swatch">
-                        <input type="radio" name="size">
-                        <span class="size-swatch__visual">43</span>
-                    </label>
+            <div class="skill-progress">
+                <div class="skill-progress__info">
+                    <span class="skill-progress__name">JavaScript</span>
+                    <span class="skill-progress__percentage">85%</span>
+                </div>
+                <div class="skill-progress__bar">
+                    <div class="skill-progress__fill" style="width: 85%;"></div>
                 </div>
             </div>
 
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button class="quantity-selector__btn" type="button">−</button>
-                    <input class="quantity-selector__input" type="number" value="1" min="1">
-                    <button class="quantity-selector__btn" type="button">+</button>
+            <div class="skill-progress">
+                <div class="skill-progress__info">
+                    <span class="skill-progress__name">React.js</span>
+                    <span class="skill-progress__percentage">80%</span>
                 </div>
-                <button class="product-actions__cart-btn" type="button">Savatga qo'shish</button>
+                <div class="skill-progress__bar">
+                    <div class="skill-progress__fill" style="width: 80%;"></div>
+                </div>
             </div>
 
-            <hr class="product-details__divider">
-
-            <div class="product-specs">
-                <h3 class="product-specs__title">Xususiyatlari:</h3>
-                <ul class="product-specs__list">
-                    <li class="product-specs__item"><strong>Material:</strong> 100% Tabiiy charm</li>
-                    <li class="product-specs__item"><strong>Taglik:</strong> EVA (Yengil va yumshoq)</li>
-                    <li class="product-specs__item"><strong>Ishlab chiqarilgan:</strong> O'zbekiston</li>
-                </ul>
+            <div class="skill-progress">
+                <div class="skill-progress__info">
+                    <span class="skill-progress__name">UI/UX Dizayn</span>
+                    <span class="skill-progress__percentage">70%</span>
+                </div>
+                <div class="skill-progress__bar">
+                    <div class="skill-progress__fill" style="width: 70%;"></div>
+                </div>
             </div>
-        </section>
 
-    </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="contact__title">Bog'lanish</h2>
+        <div class="contact__container">
+            <form action="#" class="contact-form">
+                <div class="contact-form__group">
+                    <label class="contact-form__label">Ismingiz</label>
+                    <input type="text" class="contact-form__input" placeholder="Ismingizni kiriting" required>
+                </div>
+                <div class="contact-form__group">
+                    <label class="contact-form__label">Email manzilingiz</label>
+                    <input type="email" class="contact-form__input" placeholder="example@mail.com" required>
+                </div>
+                <div class="contact-form__group">
+                    <label class="contact-form__label">Xabaringiz</label>
+                    <textarea class="contact-form__input contact-form__input--textarea" rows="5" placeholder="Xabarni yozing..." required></textarea>
+                </div>
+                <button type="submit" class="contact-form__btn">Xabarni yuborish</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* Custom Variables */
+/* ========================================================
+   7. RANG TIZIMI VA PROFESSIONAL LIGHT/DARK SXEMASI
+   ======================================================== */
 :root {
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --text-dark: #1e293b;
-    --text-muted: #64748b;
-    --border: #cbd5e1;
-    --bg-light: #f8fafc;
-    --white: #ffffff;
+    --bg-dark: #0f172a;        /* Chuqur quyuq fon */
+    --bg-card: #1e293b;        /* Kartalar foni */
+    --accent: #38bdf8;         /* Neon ko'k aksent rang */
+    --text-white: #f8fafc;     /* Asosiy matn rangi */
+    --text-muted: #94a3b8;     /* Ikkinchi darajali matn */
+    --border: #334155;
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 6. Silliq scroll ta'minlash */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Navbar balandligini hisobga olish */
 }
 
 *, *::before, *::after {
@@ -132,282 +212,402 @@ CSS
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f1f5f9;
-    color: var(--text-dark);
-    padding: 40px 20px;
-    line-height: 1.5;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
 }
 
-/* ========================================================
-   6. FLEXBOX BILAN 2 USTUNLI LAYOUT
-   ======================================================== */
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+/* NAVBAR STILLARI */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.navbar__container {
     max-width: 1100px;
     margin: 0 auto;
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.product-gallery,
-.product-details {
-    flex: 1 1 480px; /* Ekranga qarab kengayadi yoki mobilga yiqiladi */
-}
-
-/* ========================================================
-   1. RASM GALEREYASI
-   ======================================================== */
-.product-gallery__main-wrapper {
-    width: 100%;
-    background-color: var(--bg-light);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 16px;
-    border: 1px solid var(--border);
-}
-
-.product-gallery__main {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.product-gallery__thumbnails {
+    padding: 20px;
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* 7. Thumbnaillarda hover effekti */
-.product-gallery__thumb {
-    width: calc(25% - 9px);
-    aspect-ratio: 1;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    object-fit: cover;
-    transition: all 0.2s ease;
+.navbar__logo {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
 }
 
-.product-gallery__thumb:hover,
-.product-gallery__thumb--active {
-    border-color: var(--primary);
-    opacity: 0.8;
-    transform: scale(1.03);
+.navbar__links {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar__link:hover {
+    color: var(--accent);
 }
 
 /* ========================================================
-   2 & 5. MAHSULOT DETALLARI VA TAVSIFI
+   1. HERO SECTION
    ======================================================== */
-.product-details__title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.product-details__rating {
+.hero {
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.product-details__stars {
-    color: #f59e0b;
-    font-size: 18px;
-}
-
-.product-details__reviews {
-    color: var(--text-muted);
-    font-size: 14px;
-}
-
-.product-details__price-box {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.product-details__price {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
-}
-
-.product-details__old-price {
-    font-size: 16px;
-    color: var(--text-muted);
-    text-decoration: line-through;
-}
-
-.product-details__description {
-    color: #475569;
-    margin-bottom: 24px;
-}
-
-.product-details__divider {
-    border: 0;
-    border-top: 1px solid var(--border);
-    margin: 20px 0;
-}
-
-/* ========================================================
-   3. RANG VA O'LCHAM TANLASH (SWATCHES)
-   ======================================================== */
-.product-option {
-    margin-bottom: 20px;
-}
-
-.product-option__title {
-    display: block;
+.hero__welcome {
+    color: var(--accent);
     font-weight: 600;
+    font-size: 18px;
+    display: block;
     margin-bottom: 8px;
 }
 
-.product-option__swatches {
-    display: flex;
-    gap: 12px;
+.hero__title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
-/* Radio inputni yashirish */
-.color-swatch input,
-.size-swatch input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+.hero__name {
+    color: var(--accent);
 }
 
-/* Color Swatch vizuali */
-.color-swatch__visual {
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid var(--white);
-    outline: 2px solid var(--border);
-    transition: all 0.2s ease;
+.hero__subtitle {
+    font-size: 32px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
 }
 
-.color-swatch__visual--black { background-color: #1e293b; }
-.color-swatch__visual--blue { background-color: #1d4ed8; }
-.color-swatch__visual--brown { background-color: #78350f; }
-
-.color-swatch input:checked + .color-swatch__visual {
-    outline-color: var(--primary);
-    transform: scale(1.1);
+.hero__description {
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 40px;
 }
 
-/* Size Swatch vizuali */
-.size-swatch__visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--border);
+.hero__cta-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 12px 28px;
     border-radius: 8px;
-    cursor: pointer;
+    text-decoration: none;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: var(--transition);
 }
 
-.size-swatch__visual:hover {
-    border-color: var(--primary);
-    background-color: var(--bg-light);
-}
-
-.size-swatch input:checked + .size-swatch__visual {
-    border-color: var(--primary);
-    background-color: var(--primary);
-    color: var(--white);
+.hero__cta-btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
 
 /* ========================================================
-   4 & 7. MIQDOR VA AMALLAR TUGMALARI
+   2. ABOUT SECTION
    ======================================================== */
-.product-actions {
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
+.about {
+    padding: 100px 20px;
+    border-top: 1px solid var(--border);
 }
 
-/* +/- Miqdor qismi */
-.quantity-selector {
+.about__container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.about__avatar-box, .about__content {
+    flex: 1 1 400px;
+}
+
+.about__avatar {
+    width: 200px;
+    height: 200px;
+    background-color: var(--bg-card);
+    border: 4px solid var(--border);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.about__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about__text {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.about__experience {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.about__years {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.about__exp-text {
+    font-size: 14px;
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+/* ========================================================
+   3. LOYIHALAR GRID
+   ======================================================== */
+.projects {
+    padding: 100px 20px;
+    background-color: rgba(30, 41, 59, 0.3);
+}
+
+.projects__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+.project-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card__content {
+    padding: 20px;
+}
+
+.project-card__name {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-card__tag {
+    background-color: var(--bg-dark);
+    color: var(--accent);
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.project-card__link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-card__link {
+    color: var(--accent);
+}
+
+/* ========================================================
+   4. KO'NIKMALAR (PROGRESS BAR KO'RINISHIDA)
+   ======================================================== */
+.skills {
+    padding: 100px 20px;
+}
+
+.skills__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.skills__container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.skill-progress__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.skill-progress__percentage {
+    color: var(--accent);
+}
+
+.skill-progress__bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--bg-card);
+    border-radius: 4px;
     overflow: hidden;
 }
 
-.quantity-selector__btn {
-    background-color: var(--bg-light);
-    border: none;
-    width: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.skill-progress__fill {
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
-.quantity-selector__btn:hover {
-    background-color: #cbd5e1;
+/* ========================================================
+   5. ALOQA SHAKLI (CONTACT FORM)
+   ======================================================== */
+.contact {
+    padding: 100px 20px;
+    border-top: 1px solid var(--border);
 }
 
-.quantity-selector__input {
-    width: 50px;
-    border: none;
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
+.contact__title {
     text-align: center;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.contact__container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.contact-form__group {
+    margin-bottom: 24px;
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.contact-form__input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-white);
     outline: none;
-    -moz-appearance: textfield;
+    font-size: 16px;
+    transition: var(--transition);
 }
 
-.quantity-selector__input::-webkit-outer-spin-button,
-.quantity-selector__input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.contact-form__input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
 }
 
-/* Savatga qo'shish tugmasi */
-.product-actions__cart-btn {
-    flex-grow: 1;
-    background-color: var(--primary);
-    color: var(--white);
+.contact-form__input--textarea {
+    resize: none;
+}
+
+.contact-form__btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--accent);
+    color: var(--bg-dark);
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: var(--transition);
 }
 
-.product-actions__cart-btn:hover {
-    background-color: var(--primary-hover);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+.contact-form__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
 }
 
-/* 5. Xususiyatlari */
-.product-specs__title {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.product-specs__list {
-    list-style-type: none;
-}
-
-.product-specs__item {
-    margin-bottom: 6px;
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
     font-size: 14px;
-    color: #475569;
+    border-top: 1px solid var(--border);
+}
+
+/* MEDIA SOZLAMALARI (RESPONSIVE DESIGN) */
+@media (max-width: 768px) {
+    .navbar__links {
+        display: none; /* Mobil menyu soddaligi uchun yashirildi */
+    }
+    
+    .hero__title {
+        font-size: 36px;
+    }
+    
+    .hero__subtitle {
+        font-size: 24px;
+    }
+    
+    .contact-form {
+        padding: 24px;
+    }
 }
