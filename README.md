@@ -1,5 +1,5 @@
 # html-css-ni-ohrguihrguwurighwrg
-Mana, so'ralgan barcha talablarga javob beradigan, zamonaviy dizayndagi, to'liq responsive (mobil qurilmalarga moslashuvchan) veb-sahifa andozasi.
+Mana, Boshqaruv paneli (Dashboard) uchun so'ralgan talablar asosida tayyorlangan to'liq responsive HTML va CSS kodlari.
 
 1. HTML fayli (index.html)
 HTML
@@ -8,343 +8,486 @@ HTML
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zamonaviy Landing Page</title>
+    <title>Dashboard — Boshqaruv Paneli</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page">
+<body class="dashboard">
 
-    <header class="hero">
-        <div class="hero__container">
-            <h1 class="hero__title">Biznesingizni Raqamli Dunyoga Olib Chiqing</h1>
-            <p class="hero__description">Kompaniyangiz uchun zamonaviy veb-saytlar, mobil ilovalar va brending xizmatlarini yuqori sifatda taqdim etamiz.</p>
-            <a href="#services" class="hero__btn">Xizmatlar bilan tanishish</a>
+    <aside class="sidebar">
+        <div class="sidebar__logo">
+            <h2>AdminPanel</h2>
         </div>
-    </header>
-
-    <section id="services" class="services">
-        <h2 class="services__main-title">Bizning Xizmatlar</h2>
-        <div class="services__grid">
-            
-            <article class="service-card">
-                <div class="service-card__icon">💻</div>
-                <h3 class="service-card__title">Web Dasturlash</h3>
-                <p class="service-card__text">Har qanday murakkablikdagi tezkor va xavfsiz veb-saytlarni yaratish.</p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-card__icon">📱</div>
-                <h3 class="service-card__title">Mobil Ilovalar</h3>
-                <p class="service-card__text">iOS va Android platformalari uchun qulay va chiroyli ilovalar.</p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-card__icon">🎨</div>
-                <h3 class="service-card__title">UI/UX Dizayn</h3>
-                <p class="service-card__text">Foydalanuvchilarga ma'qul keladigan zamonaviy va interaktiv interfeyslar.</p>
-            </article>
-
+        <nav class="sidebar__nav">
+            <a href="#" class="sidebar__link sidebar__link--active">Bosh sahifa</a>
+            <a href="#" class="sidebar__link">Tahlillar</a>
+            <a href="#" class="sidebar__link">Buyurtmalar</a>
+            <a href="#" class="sidebar__link">Foydalanuvchilar</a>
+            <a href="#" class="sidebar__link">Sozlamalar</a>
+        </nav>
+        <div class="sidebar__profile">
+            <div class="sidebar__avatar">A</div>
+            <div class="sidebar__user-info">
+                <span class="sidebar__user-name">Asrorbek</span>
+                <span class="sidebar__user-role">Administrator</span>
+            </div>
         </div>
-    </section>
+    </aside>
 
-    <section class="testimonials">
-        <h2 class="testimonials__main-title">Mijozlarimiz Fikrlari</h2>
-        <div class="testimonials__flex">
-            
-            <div class="review-card">
-                <p class="review-card__text">"Ushbu jamoa bilan ishlash juda yoqimli bo'ldi. Veb-saytimizni aytilgan muddatdan oldin va mukammal tarzda topshirishdi!"</p>
-                <div class="review-card__author">
-                    <span class="review-card__name">Asrorbekov Sardor</span>
-                    <span class="review-card__company">"TechCorp" rahbari</span>
+    <main class="main-content">
+        
+        <header class="header">
+            <h1 class="header__title">Bosh sahifa</h1>
+            <div class="header__actions">
+                <div class="header__search-box">
+                    <input type="text" class="header__search" placeholder="Qidirish...">
+                </div>
+                <button class="header__notifications" aria-label="Bildirishnomalar">
+                    🔔 <span class="header__badge">3</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-card__icon">👥</span>
+                <div class="stat-card__details">
+                    <span class="stat-card__title">Foydalanuvchilar</span>
+                    <span class="stat-card__value">12,450</span>
                 </div>
             </div>
-
-            <div class="review-card">
-                <p class="review-card__text">"Ajoyib dizayn va yuqori sifat. Mobil ilovamiz ishga tushganidan so'ng mijozlarimiz soni ikki barobarga ko'paydi."</p>
-                <div class="review-card__author">
-                    <span class="review-card__name">Malika Karimova</span>
-                    <span class="review-card__company">"GreenFood" asoschisi</span>
+            <div class="stat-card">
+                <span class="stat-card__icon">💰</span>
+                <div class="stat-card__details">
+                    <span class="stat-card__title">Daromad</span>
+                    <span class="stat-card__value">$45,230</span>
                 </div>
             </div>
-
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__info">
-                <h4 class="footer__title">Aloqa</h4>
-                <p class="footer__text">Telefon: +998 (90) 123-45-67</p>
-                <p class="footer__text">Email: info@example.com</p>
-            </div>
-            <div class="footer__socials">
-                <h4 class="footer__title">Ijtimoiy tarmoqlar</h4>
-                <div class="footer__links">
-                    <a href="#" class="footer__link">Telegram</a>
-                    <a href="#" class="footer__link">Instagram</a>
-                    <a href="#" class="footer__link">LinkedIn</a>
+            <div class="stat-card">
+                <span class="stat-card__icon">📦</span>
+                <div class="stat-card__details">
+                    <span class="stat-card__title">Buyurtmalar</span>
+                    <span class="stat-card__value">1,120</span>
                 </div>
             </div>
-        </div>
-        <div class="footer__bottom">
-            <p>&copy; 2026 Barcha huquqlar himoyalangan.</p>
-        </div>
-    </footer>
+            <div class="stat-card">
+                <span class="stat-card__icon">📈</span>
+                <div class="stat-card__details">
+                    <span class="stat-card__title">O'sish</span>
+                    <span class="stat-card__value">+24.5%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <h3 class="table-container__title">Oxirgi tranzaksiyalar</h3>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Mijoz</th>
+                            <th>Sana</th>
+                            <th>Suma</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alisher Navoiy</td>
+                            <td>06.07.2026</td>
+                            <td>$1,200</td>
+                            <td><span class="status-badge status-badge--success">Bajarildi</span></td>
+                        </tr>
+                        <tr>
+                            <td>Zuhra Umarova</td>
+                            <td>05.07.2026</td>
+                            <td>$450</td>
+                            <td><span class="status-badge status-badge--pending">Kutilmoqda</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jasur Aliyev</td>
+                            <td>04.07.2026</td>
+                            <td>$890</td>
+                            <td><span class="status-badge status-badge--success">Bajarildi</span></td>
+                        </tr>
+                        <tr>
+                            <td>Madina Sobirova</td>
+                            <td>02.07.2026</td>
+                            <td>$150</td>
+                            <td><span class="status-badge status-badge--danger">Rad etildi</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>
 2. CSS fayli (style.css)
 CSS
-/* ========================================================
-   6. CSS CUSTOM PROPERTIES (VARIABLES)
-   ======================================================== */
+/* Custom Properties (Variables) */
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --secondary-color: #0f172a;
-    --bg-light: #f8fafc;
-    --bg-white: #ffffff;
-    --text-dark: #1e293b;
+    --bg-main: #f8fafc;
+    --bg-sidebar: #0f172a;
+    --text-light: #f1f5f9;
     --text-muted: #64748b;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-dark: #1e293b;
+    --primary: #3b82f6;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    
+    --success: #10b981;
+    --success-bg: #d1fae5;
+    --pending: #f59e0b;
+    --pending-bg: #fef3c7;
+    --danger: #ef4444;
+    --danger-bg: #fee2e2;
 }
 
-/* Umumiy reset qoidalari */
+/* Reset elementlari */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-.page {
-    font-family: var(--font-main);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-main);
     color: var(--text-dark);
-    background-color: var(--bg-white);
-    line-height: 1.6;
 }
 
 /* ========================================================
-   1. HERO SECTION STILLARI
+   5. CSS GRID BILAN 2 USTUNLI LAYOUT
    ======================================================== */
-.hero {
-    background: linear-gradient(135deg, var(--secondary-color), #1e293b);
-    color: var(--bg-white);
-    padding: 100px 20px;
-    text-align: center;
+.dashboard {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
 }
 
-.hero__container {
-    max-width: 800px;
-    margin: 0 auto;
+/* ========================================================
+   1. STICKY SIDEBAR
+   ======================================================== */
+.sidebar {
+    background-color: var(--bg-sidebar);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
 }
 
-.hero__title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero__description {
-    font-size: 1.2rem;
-    color: #cbd5e1;
+.sidebar__logo {
     margin-bottom: 40px;
 }
 
-/* 7. Hover animatsiyasi (Tugma) */
-.hero__btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--bg-white);
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.hero__btn:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
-
-/* ========================================================
-   2. FEATURES/SERVICES SECTION (GRID ORQALI RESPONSIVE)
-   ======================================================== */
-.services {
-    padding: 80px 20px;
-    background-color: var(--bg-light);
-}
-
-.services__main-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-/* 5. Grid bilan responsive joylashuv */
-.services__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.service-card {
-    background-color: var(--bg-white);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-smooth);
-}
-
-.service-card__icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.service-card__title {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-}
-
-.service-card__text {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-/* 7. Hover animatsiyasi (Karta) */
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-md);
-}
-
-/* ========================================================
-   3. TESTIMONIALS SECTION (FLEXBOX ORQALI RESPONSIVE)
-   ======================================================== */
-.testimonials {
-    padding: 80px 20px;
-}
-
-.testimonials__main-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 50px;
-}
-
-/* 5. Flexbox bilan responsive joylashuv */
-.testimonials__flex {
+.sidebar__nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.sidebar__link {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.sidebar__link:hover, 
+.sidebar__link--active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.sidebar__profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+}
+
+.sidebar__avatar {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
+    font-weight: bold;
 }
 
-.review-card {
-    background-color: var(--bg-light);
-    padding: 30px;
-    border-radius: 12px;
-    flex: 1 1 450px; /* Minimal 450px joy egallaydi, joy qolmasa pastga tushadi */
-    max-width: 520px;
-}
-
-.review-card__text {
-    font-style: italic;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-}
-
-.review-card__author {
+.sidebar__user-info {
     display: flex;
     flex-direction: column;
 }
 
-.review-card__name {
-    font-weight: 700;
+.sidebar__user-name {
+    font-weight: 600;
+    font-size: 14px;
 }
 
-.review-card__company {
-    font-size: 0.85rem;
+.sidebar__user-role {
+    font-size: 12px;
     color: var(--text-muted);
 }
 
+/* Main content wrapper */
+.main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 /* ========================================================
-   4. FOOTER STILLARI
+   2. TOP HEADER
    ======================================================== */
-.footer {
-    background-color: var(--secondary-color);
-    color: #94a3b8;
-    padding: 60px 20px 20px 20px;
-}
-
-/* 5. Flexbox orqali footer komponentlarini ajratish */
-.footer__container {
+.header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 40px;
+    align-items: center;
+    background-color: var(--white);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.footer__title {
-    color: var(--bg-white);
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+.header__title {
+    font-size: 24px;
+    font-weight: 700;
 }
 
-.footer__text {
-    margin-bottom: 10px;
-}
-
-.footer__links {
+.header__actions {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.footer__link {
-    color: #94a3b8;
-    text-decoration: none;
-    transition: color 0.2s ease;
+.header__search {
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s ease;
 }
 
-.footer__link:hover {
-    color: var(--bg-white);
+.header__search:focus {
+    width: 260px;
+    border-color: var(--primary);
 }
 
-.footer__bottom {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 0.85rem;
+.header__notifications {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--danger);
+    color: var(--white);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 /* ========================================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
+   3. STATS KARTALAR
    ======================================================== */
-@media (max-width: 768px) {
-    .hero__title {
-        font-size: 2rem;
-    }
-    
-    .footer__container {
-        flex-direction: column;
-        text-align: center;
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.stat-card__icon {
+    font-size: 28px;
+    background-color: #f1f5f9;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.stat-card__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card__title {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.stat-card__value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* ========================================================
+   4. DATA TABLE & STATUS BADGE
+   ======================================================== */
+.table-container {
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.table-container__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th, 
+.data-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge--success {
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.status-badge--pending {
+    background-color: var(--pending-bg);
+    color: var(--pending);
+}
+
+.status-badge--danger {
+    background-color: var(--danger-bg);
+    color: var(--danger);
+}
+
+/* ========================================================
+   6. RESPONSIVE — MOBILGACHA YIQILADIGAN SIDEBAR
+   ======================================================== */
+@media (max-width: 992px) {
+    .dashboard {
+        grid-template-columns: 1fr; /* Sidebar alohida ustun bo'lmaydi */
     }
 
-    .footer__links {
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding: 16px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sidebar__logo {
+        margin-bottom: 0;
+    }
+
+    .sidebar__nav {
+        flex-direction: row;
+        gap: 5px;
+        flex-grow: 0;
+    }
+
+    .sidebar__link {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .sidebar__profile {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .sidebar__user-info {
+        display: none; /* Mobil ekranda joy tejash uchun */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar__nav {
+        flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header__actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header__search {
+        width: 100%;
+    }
+    
+    .header__search:focus {
+        width: 100%;
     }
 }
